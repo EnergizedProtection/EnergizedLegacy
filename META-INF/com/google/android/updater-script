@@ -1,0 +1,28 @@
+ui_print(" =============================================");
+ui_print(" =========== ENERGIZED PROTECTION ============");
+ui_print(" =========== ad.porn.malware blocking ============");
+ui_print(" ====== [for SuperSU and LineageSU systems] =======");
+ui_print(" =============================================");
+sleep (2)
+ui_print(" ");
+ui_print(" Installing latest BUSYBOX to system");
+package_extract_dir("busybox", "/tmp/busybox");
+run_program("/sbin/busybox", "unzip", "/tmp/busybox/busybox.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/busybox.zip");
+sleep(1);
+ui_print("Now mounting the system r/w....");
+sleep(1);
+ui_print(" ");
+run_program("/sbin/busybox", "mount", "/system");
+ui_print("Extracting ENERGIZED script....");
+sleep(1);
+package_extract_dir("system", "/system");
+sleep(1);
+ui_print("Setting proper permissions for ENERGIZED script....");
+set_perm(0, 0, 0755, "/system/bin/energized");
+sleep(1);
+ui_print(" ");
+ui_print("DONE !!");
+ui_print(" =========== Stay Energized ============");
+unmount("/system");
+sleep(1)
