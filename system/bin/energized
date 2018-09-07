@@ -35,8 +35,6 @@ divider="-------------------------------------------------"
 # Mount System
 # ----------------------------------------
 mount -o remount,rw /system
-fi
-
 # Create Energized Protection Directory
 # ----------------------------------------
 if [ ! -d $DIRECTORY ]; then
@@ -117,8 +115,7 @@ echo "[+] Inspecting System Hosts"; sleep 0.2; clear
 	echo ''
 	echo "$divider"
 	sleep 2
-fi
-
+    clear
 # Check Energized Directory
 # ----------------------------------------
 clear
