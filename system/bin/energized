@@ -34,10 +34,7 @@ divider="-------------------------------------------------"
 
 # Mount System
 # ----------------------------------------
-if [ ! -d /sbin/.core/mirror/bin ]; then
-    mkdir -p /sbin/.core/mirror/bin
-    mount -o bind /data/adb/magisk /sbin/.core/mirror/bin
-fi
+mount -o rw,remount /system
 
 # Create Energized Protection Directory
 # ----------------------------------------
