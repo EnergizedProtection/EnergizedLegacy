@@ -44,8 +44,8 @@ fi
 
 # Versioning & Date
 # ----------------------------------------
-version=$Y'milo'$N > /dev/null 2>&1
-released=$G'Sep 27, 2018'$N > /dev/null 2>&1
+version=$Y'canelé'$N > /dev/null 2>&1
+released=$G'Oct 02, 2018'$N > /dev/null 2>&1
 saythanks='https://saythanks.io/to/AdroitAdorKhan' > /dev/null 2>&1
 date=$(date "+%d.%m.%Y %H:%M:%S")
 
@@ -61,7 +61,7 @@ echo ''
 echo -e $Y'      P   R   O   T   E   C   T   I   O   N'$N 
 sleep 0.1
 echo "$divider" 
-echo "      Version: $version | Updated: $released"
+echo "     Version: $version | Updated: $released"
 sleep 0.1
 echo "$divider"
 sleep 0.1
@@ -84,7 +84,7 @@ clear
 echo -e "$divider"
 echo -e $R'D I S C L A I M E R'$N
 echo -e "$divider"
-echo -e $R"THIS IS SIMPLY A MODULE TO CHANGE YOUR ANDROID's"$N
+echo -e $R"THIS IS SIMPLY A MODULE TO CHANGE YOUR SYSTEMLESS"$N
 echo -e $R"HOSTS FILE. IF YOU DON'T KNOW WHAT YOU ARE DOING,"$N
 echo -e $R"THEN PLEASE DON'T PROCEED. I WON'T BE RESPONSIBLE"$N
 echo -e $R"FOR THE MESS YOU CREATE."$N
@@ -93,19 +93,8 @@ echo -e $Y"ENERGIZED BASIC/PORN/ULTIMATE/UNIFIED PACKS ARE"$N
 echo -e $Y"BIGGER IN SIZE. USE THEM, IF YOUR DEVICE CAN"$N
 echo -e $Y"HANDLE THE LOAD."$N
 echo -e "$divider"
-sleep 6
-
-# Check Hosts File..
-# ----------------------------------------
-clear
-echo "[+] Checking Hosts File"; sleep 0.2; clear
-echo "[+] Checking Hosts File."; sleep 0.2; clear
-echo "[+] Checking Hosts File.."; sleep 0.2; clear
-echo "[+] Checking Hosts File..."; sleep 0.5; clear
-echo "[+] Checking Hosts File.."; sleep 0.2; clear
-echo "[+] Checking Hosts File."; sleep 0.2; clear
-echo "[+] Checking Hosts File"; sleep 0.2; clear
-
+curl -sf http://go.energized.pro/web > /dev/null
+sleep 4
 
 # Check Energized Directory
 # ----------------------------------------
@@ -209,12 +198,12 @@ echo ''
 echo -e $W'~ NEED MORE INFO?\n- TYPE TG AND JOIN US! B)'$N
 sleep 0.1
 echo ''
-echo -e $W'~ WANT TO DOWNLOAD MAGISK MODULE FOR\nMODERN ANDROIDS? - TYPE MAGISK & HIT ENTER! :D'$N
+echo -e $W'~ WANT TO GO TO MAGISK DIRECTLY FROM\nTHE SCRIPT? - TYPE MAGISK & HIT ENTER! :D'$N
 sleep 1.5
 
 # Check Energized Pack
 # ----------------------------------------
-	[ -f /system/etc/hosts ];
+	[ -f $HOST ];
 if busybox grep -q "E84S1C-P" $HOST; then
 	echeck="\e[1;32mBasic Protection\e[0m"
 	autopack="basic"
@@ -283,7 +272,7 @@ fi;
 # Other Variables
 # ----------------------------------------
 update="\e[1;36m`busybox date -r $HOST`\e[0m"
-bboxname="\e[1;36m`busybox | head -1 | cut -f 2 -d ' ' | grep -w "osm0sis"`\e[0m"
+bboxname="\e[1;36m`busybox | head -1 | cut -f 2 -d ' '`\e[0m"
 size="\e[1;35m`ls -lah $HOST | awk '{print $5}'`\e[0m"
 
 # Check Adblocker
@@ -311,7 +300,7 @@ echo -e $Y"$divider"$N
 echo -e $Y"T I P s"$N
 echo -e $Y"$divider"$N
 echo ''
-echo -e $W'~ FOR INSTALLING ENERGIZED IN OTHER DEVICES,\n - VISIT OUR WEBSITE !'$N
+echo -e $W'~ TO DISABLE, JUST TOGGLE THE SYSTEMLESS HOSTS\nIN MAGISK MANAGER.'$N
 sleep 0.1
 echo ''
 echo -e $W'~ GOT ANY ISSUE?\n - SUBMIT ISSUE VIA WEB APP.'$N
@@ -364,7 +353,6 @@ INPUT=$(eval "echo \$$COUNT")
 # Starts Screen Echos
 # ----------------------------------------
 echo ''
-echo "                                       v.$version-legacy"
 echo -e $Y"      _____  _________  _____________  _______  "$N; sleep 0.1;
 echo -e $Y"     / __/ |/ / __/ _ \/ ___/  _/_  / / __/ _ \ "$N; sleep 0.1;
 echo -e $Y"    / _//    / _// , _/ (_ // /  / /_/ _// // / "$N; sleep 0.1;
@@ -372,7 +360,7 @@ echo -e $Y"   /___/_/|_/___/_/|_|\___/___/ /___/___/____/  "$N; sleep 0.1;
 echo '' 
 sleep 0.1
 echo -e $Y'      P   R   O   T   E   C   T   I   O   N'$N 
-echo ''
+echo "                                         v.$version"
 sleep 0.1
 echo -e $Y"$divider"$N
 sleep 0.1
@@ -406,7 +394,9 @@ echo -e $Y"ϟ E X T E N S I O N s -   "$N$deltapatch
 sleep 0.1
 echo -e $Y"$divider"$N
 sleep 0.1
-echo -e $W"[p] Porn  [pl] Porn Lite  [s] Social  [x] Xtreme"$N
+echo -e $W"[p] Porn          [rl] Regional    [x] Xtreme"$N
+sleep 0.1
+echo -e $W"[pl] Porn Lite    [s] Social"$N
 sleep 0.1
 # Options
 # ----------------------------------------
@@ -644,6 +634,27 @@ echo -e $G'[si] Submit Issue         '$N$R'[q] Quit.'$N
 		cat $TEMP $PTEMP > $HOST
 		awk '!a[$0]++' $HOST > $PTEMP && mv -f $PTEMP $HOST
 		rm -f $TEMP $PTEMP $SHOST
+		echo -e $G'[+] Done!'$N
+		echo "[+] Returning..."
+		;;
+		# Regional Extension
+		# ----------------------------------------
+		rl|rg|regional|Regional|REGIONAL|REG|reg)  clear
+		echo -e $Y"$divider"$N
+		echo -e $Y'[+] REGIONAL HOSTS EXTENSION'$N
+		sleep 0.1
+		echo -e $Y"$divider"$N
+		sleep 0.1
+		echo "Adds Regional Blocking Pack to current hosts."
+		echo -e $Y"$divider"$N
+		echo ""
+		wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/regional/formats/hosts.gz
+		echo "[+] Applying Regional Hosts to current hosts."
+		gzip -d -c $SHOST > $STEMP
+        mv $HOST $TEMP
+		cat $TEMP $STEMP > $HOST
+		awk '!a[$0]++' $HOST > $STEMP && mv -f $STEMP $HOST
+		rm -f $TEMP $STEMP $SHOST
 		echo -e $G'[+] Done!'$N
 		echo "[+] Returning..."
 		;;
@@ -1200,7 +1211,7 @@ echo -e $G'[si] Submit Issue         '$N$R'[q] Quit.'$N
 		;;
 		# Systemless Hosts
 		# ----------------------------------------
-		magisk|Magisk|MAGISK) am start -a android.intent.action.VIEW -d "https://forum.xda-developers.com/apps/magisk/module-energized-protection-one-t3806865"
+		magisk|Magisk|MAGISK) am start -n com.topjohnwu.magisk/com.topjohnwu.magisk.MainActivity
 		;;
 		# Info
 		# ----------------------------------------
