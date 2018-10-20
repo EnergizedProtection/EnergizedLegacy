@@ -84,7 +84,7 @@ clear
 echo -e "$divider"
 echo -e $R'D I S C L A I M E R'$N
 echo -e "$divider"
-echo -e $R"THIS IS SIMPLY A MODULE TO CHANGE YOUR SYSTEMLESS"$N
+echo -e $R"THIS IS SIMPLY A MODULE TO CHANGE YOUR ANDROID's"$N
 echo -e $R"HOSTS FILE. IF YOU DON'T KNOW WHAT YOU ARE DOING,"$N
 echo -e $R"THEN PLEASE DON'T PROCEED. I WON'T BE RESPONSIBLE"$N
 echo -e $R"FOR THE MESS YOU CREATE."$N
@@ -198,7 +198,7 @@ echo ''
 echo -e $W'~ NEED MORE INFO?\n- TYPE TG AND JOIN US! B)'$N
 sleep 0.1
 echo ''
-echo -e $W'~ WANT TO GO TO MAGISK DIRECTLY FROM\nTHE SCRIPT? - TYPE MAGISK & HIT ENTER! :D'$N
+echo -e $W'~ WANT MAGISK MODULE FOR\nMODERN ANDROIDS? - TYPE MAGISK & HIT ENTER! :D'$N
 sleep 1.5
 
 # Check Energized Pack
@@ -1211,7 +1211,7 @@ echo -e $G'[si] Submit Issue         '$N$R'[q] Quit.'$N
 		;;
 		# Systemless Hosts
 		# ----------------------------------------
-		magisk|Magisk|MAGISK) am start -n com.topjohnwu.magisk/com.topjohnwu.magisk.MainActivity
+		magisk|Magisk|MAGISK) am start -a android.intent.action.VIEW -d "https://forum.xda-developers.com/apps/magisk/module-energized-protection-one-t3806865"
 		;;
 		# Info
 		# ----------------------------------------
